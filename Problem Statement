@@ -1,0 +1,170 @@
+ Problem Statement
+
+You need to create few APIs to find the  Dist/State/Town with Regular expression search
+
+Steps:
+
+	1. You need to store the Attached CSV into Database with proper keys and Relationships 
+	2. when someone is searching for any state you need to give all the Districts name belongs to that state.
+	3. When someone is searching for any town name you need to return the state and District name belongs to that town.
+	4. When someone is searching for district you need to return all the Towns belongs to that District.
+	5. Use NodeJS(Express.js) mongodb.
+	6. Host the Solution into AWS and provide the End to end Solution APIs.
+	7. Provide Gitlab url for code access.
+	8. Provide Mongodb Access to check schema design.
+	9. Detail note about aws Ec2 Security Policy.
+
+
+
+Expected Routes and response.
+	Get /state?q=Kera
+		[ 
+		   { 
+		      state:Kerala,
+		      district_code:14,
+		      district:Thiruvananthapuram
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:1,
+		      district:Kasaragod
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:4,
+		      district:Kozhikode
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:10,
+		      district:Kottayam
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:6,
+		      district:Palakkad
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:9,
+		      district:Idukki
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:3,
+		      district:Wayanad
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:13,
+		      district:Kollam
+		   },
+		   { 
+		      state:Kerala,
+		      district_code:5,
+		      district:Malappuram
+		   }
+		],
+
+	Get /town?q=Phule
+		[	
+			{
+				town: Phulera
+				state: Rajasthan,
+				district: Jaipur
+			}
+		]
+
+	Get /district?q=Jaip
+		[ 
+		   { 
+		      town:town:Bagru,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Chaksu,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Chomu,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Jaipur,
+		      Urban_status:,
+		      M.Corp. State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Jobner,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Kishangarh Renwal,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Kotputli,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Phulera,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+
+		      District:Jaipur
+		   },
+		   { 
+		      town:Sambhar,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Shahpura,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   },
+		   { 
+		      town:Viratnagar,
+		      Urban_status:M,
+		      State_code:8,
+		      State:Rajasthan,
+		      District_code:12,
+		      District:Jaipur
+		   }
+		]
+
